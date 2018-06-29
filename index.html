@@ -12,51 +12,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>360PI – 2018 ECCV WORKSHOP</title>
 
-  <script  src="./js/jquery.js"></script>
-  <script  src="./js/jquery-migrate.min.js"></script>
-  <script  src="./js/sdm_wp_scripts.js"></script>
-  <script  src="./js/wp-quicklatex-frontend.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/jquery-migrate.min.js"></script>
+  <script src="./js/sdm_wp_scripts.js"></script>
+  <script src="./js/wp-quicklatex-frontend.js"></script>
   <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
   <link rel="dns-prefetch" href="https://s.w.org/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link rel="stylesheet" id="wp-quicklatex-format-css" href="./css/quicklatex-format.css"  media="all">
-  <link rel="stylesheet" id="sdm-styles-css" href="./css/sdm_wp_styles.css"  media="all">
-  <link rel="stylesheet" id="uaf_client_css-css" href="./css/uaf.css"  media="all">
-  <link rel="stylesheet" id="twentyseventeen-fonts-css" href="./css/font_latin"  media="all">
-  <link rel="stylesheet" id="twentyseventeen-style-css" href="./css/style.css"  media="all">
-  <link rel="stylesheet" id="elementor-icons-css" href="./css/elementor-icons.min.css"  media="all">
-  <link rel="stylesheet" id="font-awesome-css" href="./css/font-awesome.min.css"  media="all">
-  <link rel="stylesheet" id="elementor-animations-css" href="./css/animations.min.css"  media="all">
-  <link rel="stylesheet" id="elementor-frontend-css" href="./css/frontend.min.css"  media="all">
-  <link rel="stylesheet" id="elementor-global-css" href="./css/global.css"  media="all">
-  <link rel="stylesheet" id="elementor-post-11-css" href="./css/post-11.css"  media="all">
-  <link rel="stylesheet" id="google-fonts-1-css" href="./css/font_cy"  media="all">
+  <link rel="stylesheet" id="wp-quicklatex-format-css" href="./css/quicklatex-format.css" media="all">
+  <link rel="stylesheet" id="sdm-styles-css" href="./css/sdm_wp_styles.css" media="all">
+  <link rel="stylesheet" id="uaf_client_css-css" href="./css/uaf.css" media="all">
+  <link rel="stylesheet" id="twentyseventeen-fonts-css" href="./css/font_latin.css" media="all">
+  <link rel="stylesheet" id="twentyseventeen-style-css" href="./css/style.css" media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="./css/font-awesome.min.css" media="all">
+  <link rel="stylesheet" id="elementor-animations-css" href="./css/animations.min.css" media="all">
+  <link rel="stylesheet" id="elementor-frontend-css" href="./css/frontend.min.css" media="all">
+  <link rel="stylesheet" id="elementor-global-css" href="./css/global.css" media="all">
+  <link rel="stylesheet" id="elementor-icons-css" href="./css/elementor-icons.min.css" media="all">
+  <link rel="stylesheet" id="elementor-post-11-css" href="./css/post-11.css" media="all">
+  <link rel="stylesheet" id="google-fonts-1-css" href="./css/font_cy.css" media="all">
   <link rel="canonical" href="https://360PI.github.io/">
   <link rel="shortlink" href="https://360PI.github.io/">
-
-
-  <style  id="wp-custom-css">
-  .site-info { display: none; }
-  .twentyseventeen-front-page.content-area {
-    width: 100%;
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-  }
-
-  .twentyseventeen-front-page.site {
-    margin:0px;
-  }
-</style>
 
 </head>
 
 <body class="twentyseventeen-front-page has-header-video">
-<div id="HOME" class="site">
-  <header id="masthead" class="site-header" role="banner">
+
+<div id="HOME" class="centerContainer">
+  <!-- header -->
+  <header id="header" class="site-header" role="banner">
 
     <div class="custom-header" style="margin-bottom: 72px;">
 
@@ -65,14 +52,16 @@
       <!-- https://developers.google.com/youtube/player_parameters -->
       <div class="custom-header-media">
         <div id="wp-custom-header" class="wp-custom-header">
-          <iframe width="1080" height="540" src="https://www.youtube.com/embed/e3r-gVIf-qc?autoplay=1&loop=1&mute=1&controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+          <iframe width="1080" height="540"
+                  src="https://www.youtube.com/embed/e3r-gVIf-qc?autoplay=1&loop=1&mute=1&controls=0&rel=0&start=3"
+                  frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="site-branding">
         <div class="wrap">
 
-          <div class="site-branding-text">
+          <div>
             <h1 class="site-title"><a href="#INTRODUCTION" rel="home">360° Perception and Interaction</a></h1>
 
             <p class="site-description">2018 ECCV WORKSHOP</p>
@@ -90,8 +79,12 @@
 
           <!-- Floating menu -->
           <button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-            <svg class="icon" > <use href="#icon-bars"></use> </svg>
-            <svg class="icon" > <use href="#icon-close"></use> </svg>
+            <svg class="icon">
+              <use href="#icon-bars"></use>
+            </svg>
+            <svg class="icon">
+              <use href="#icon-close"></use>
+            </svg>
             Menu
           </button>
 
@@ -99,25 +92,24 @@
             <ul id="top-menu" class="menu">
               <li id="homeitem" class="menu-item"><a href="https://360pi.github.io/#HOME">HOME</a></li>
               <li id="introductionitem" class="menu-item"><a href="#INTRODUCTION">INTRODUCTION</a></li>
+              <li id="papersitem" class="menu-item"><a href="#SUBMISSION">SUBMISSION</a></li>
               <li id="workshopitem" class="menu-item"><a href="#WORKSHOPPROGRAM">WORKSHOP</a></li>
 
               <li id="submenu" class="menu-item-has-children">
-                <a>INFO<svg class="icon"> <use href="#icon-angle-down"></use> </svg></a>
-                <button class="dropdown-toggle">
-                  <svg class="icon"> <use href="#icon-angle-down"></use> </svg>
-                  <span class="svg-fallback icon-angle-down"></span><span class="screen-reader-text">Expand child menu</span>
-                </button>
+                <a>INFO</a>
                 <ul class="sub-menu">
 
                   <li id="datesitem" class="menu-item"><a href="#IMPORTANTDATES">Important Dates</a></li>
                   <li id="speakersitem" class="menu-item"><a href="#INVITEDSPEAKERS">Invited Speakers</a></li>
                   <li id="committeeitem" class="menu-item"><a href="#ORGANIZINGCOMMITTEE">Organizing Committee</a></li>
-                  <li id="eccvitem" class="menu-item"><a href="https://eccv2018.org/program/workshops_tutorials/">ECCV Workshop</a></li>
+                  <li id="eccvitem" class="menu-item"><a href="https://eccv2018.org/program/workshops_tutorials/">ECCV
+                    Workshop</a></li>
                 </ul>
               </li>
 
             </ul>
           </div>
+
         </nav><!-- #site-navigation -->
       </div><!-- .wrap -->
     </div><!-- .navigation-top -->
@@ -126,652 +118,542 @@
 
   <!-- content -->
   <div class="site-content-contain">
-    <div id="content" class="site-content">
-      <div class="elementor elementor-11">
-        <div class="elementor-inner">
-          <div class="elementor-section-wrap">
-
-            <section class="elementor-element">
-              <div class="elementor-container">
-                <div class="elementor-row">
-                  <div data-id="5199a0f" class="elementor-element elementor-element-5199a0f elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
-                    <div class="elementor-column-wrap elementor-element-populated">
-                      <div class="elementor-widget-wrap">
-
-                        <!-- Introduction -->
-                        <section data-id="25a0f76" class="elementor-element elementor-element-25a0f76 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                              <div data-id="490c7a5" class="elementor-element elementor-element-490c7a5 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="elementor-element elementor-element-1cdd358 elementor-widget-heading">
-                                <div class="elementor-widget-container">
-                                  <h2 id="INTRODUCTION" class="elementor-heading-title elementor-size-default">INTRODUCTION</h2>
-                                </div>
-                              </div>
-
-                              <div data-id="e4181b7" class="elementor-element elementor-element-e4181b7 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-
-                        <section data-id="40d1284" class="elementor-element elementor-element-40d1284 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                              <div data-id="18adf1c" class="elementor-element elementor-element-18adf1c elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="fc801c9" class="elementor-element elementor-element-fc801c9 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div data-id="5971c29" class="elementor-element elementor-element-5971c29 elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
-                                      <div class="elementor-widget-container">
-                                        <div class="elementor-text-editor elementor-clearfix">
-                                          360° camera is a core building block of the Virtual Reality (VR) and Augmented Reality (AR) technology that bridges the real and digital world. It allows us to build the virtual environments for VR/AR applications from the real world easily by capturing the entire visual world surrounding the camera simultaneously. With the rapid growth of VR/AR technology, the availability and popularity of 360° camera are also growing faster than ever. Many camera manufacturers introduce new 360° camera models, both professional and consumer-level, in the past few years. At the same time, content sharing sites like YouTube and Facebook enable their support for 360° images and videos, and content creators such as the news and movie industry start to exploit and deliver the new media. People now create, share, and watch 360° content in our everyday life just like any other media, and the amount of 360° content is increasing rapidly.
-                                          Despite the popularity of 360° content, the new media remains relatively unexplored from various aspects.
-                                          The difference between 360° images and traditional images introduces many new challenges and opportunities, and the research community has just started to explore them.
-
-                                          <p><span style="color: #333300;"></span></p>
-
-                                          We believe that a workshop for research centering around 360° content can greatly boost the research in the field and that this is the right time for the workshop. The rapidly growing number of 360° content incurs an unprecedented need of technologies to handle the new media, yet we still don’t have a satisfactory solution to present, process or even encode this new format. Researchers from various communities including computer vision, HCI, multimedia, computer graphic and machine learning are working are working on or interested in 360° related topic together. This will provide a forum to discuss the current progress in the field and fost in this field with overlapping directions independently. A major goal of this workshop will be to bring researchers thater collaboration. It will also provide a good introduction for researchers that are interested and want to start their research in the field.
-
-                                          <p><span style="color: #333300;"></span></p>
-
-                                          For the poster session, we invite 2-page abstracts describing relevant work that is unpublished, recently published, or presented in the main conference. These submissions will be reviewed blindly by our program committee. The topic should be related to 360° content, including but not limited to:
-
-                                          <p><span style="color: #333300;"></span></p>
-
-                                          <ul>
-                                            <li><span style="color: #333300;"></span>User attention / saliency prediction in 360° video</li>
-                                            <li><span style="color: #333300;"></span>Improving 360° video display</li>
-                                            <li><span style="color: #333300;"></span>360° video stabilization</li>
-                                            <li><span style="color: #333300;"></span>360° video summarization</li>
-                                            <li><span style="color: #333300;"></span>Learning visual recognition model in 360° content (e.g., object detection, semantic segmentation, etc.)</li>
-                                            <li><span style="color: #333300;"></span>Learning CNN for spherical data</li>
-                                            <li><span style="color: #333300;"></span>Visual features for 360° imagery</li>
-                                            <li><span style="color: #333300;"></span>Depth and surface normal prediction using 360° images</li>
-                                            <li><span style="color: #333300;"></span>Indoor localization / mapping using 360° camera</li>
-                                            <li><span style="color: #333300;"></span>Robot navigation using 360° camera</li>
-                                            <li><span style="color: #333300;"></span>Telepresence using 360° camera</li>
-                                            <li><span style="color: #333300;"></span>Smart TV system for 360° videos</li>
-                                            <li><span style="color: #333300;"></span>Video editing tool for 360° videos</li>
-                                            <li><span style="color: #333300;"></span>Projection model for 360° imagery</li>
-                                            <li><span style="color: #333300;"></span>360° specific video compression</li>
-                                            <li><span style="color: #333300;"></span>360° video streaming</li>
-                                            <li><span style="color: #333300;"></span>3D reconstruction using 360° camera</li>
-                                            <li><span style="color: #333300;"></span>360° camera model</li>
-                                            <li><span style="color: #333300;"></span>Novel applications for 360° imagery</li>
-                                            <li><span style="color: #333300;"></span>360° image/video/audio dataset</li>
-
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div data-id="3ec9d2e" class="elementor-element elementor-element-3ec9d2e elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-
-                        <div data-id="97798c7" class="elementor-element elementor-element-97798c7 elementor-widget elementor-widget-divider" data-element_type="divider.default">
-                          <div class="elementor-widget-container">
-                            <div class="elementor-divider">
-                              <span class="elementor-divider-separator"></span>
-                            </div>
-                          </div>
-                        </div>
-
-
-                        <!-- Workshop Program -->
-                        <section data-id="8a90f3d" class="elementor-element elementor-element-8a90f3d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                              <div data-id="4c40805" class="elementor-element elementor-element-4c40805 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="71b8ae3" class="elementor-element elementor-element-71b8ae3 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div data-id="938ff31" class="elementor-element elementor-element-938ff31 elementor-widget elementor-widget-heading" data-element_type="heading.default">
-                                      <div class="elementor-widget-container">
-                                        <h2 id="WORKSHOPPROGRAM" class="elementor-heading-title elementor-size-default">WORKSHOP PROGRAM</h2>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div data-id="3d1affb" class="elementor-element elementor-element-3d1affb elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-
-                        <section data-id="d68691a" class="elementor-element elementor-element-d68691a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                              <div data-id="300be89" class="elementor-element elementor-element-300be89 elementor-column elementor-col-20 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="63e88005" class="elementor-element elementor-element-63e88005 elementor-column elementor-col-20 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div data-id="6cbb4ced" class="elementor-element elementor-element-6cbb4ced elementor-align-center elementor-widget elementor-widget-icon-list" data-element_type="icon-list.default">
-                                      <div class="elementor-widget-container">
-                                        <ul class="elementor-icon-list-items">
-                                          <li class="elementor-icon-list-item">
-                                              <span class="elementor-icon-list-icon">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                              </span>
-                                            <span class="elementor-icon-list-text">  September 9th Half day, TBC </span>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="7802b160" class="elementor-element elementor-element-7802b160 elementor-column elementor-col-20 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div data-id="55d01af4" class="elementor-element elementor-element-55d01af4 elementor-align-center elementor-widget elementor-widget-icon-list" data-element_type="icon-list.default">
-                                      <div class="elementor-widget-container">
-                                        <ul class="elementor-icon-list-items">
-                                          <li class="elementor-icon-list-item">
-                                              <span class="elementor-icon-list-icon">
-                                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                              </span>
-                                            <span class="elementor-icon-list-text">  Munich, Germany </span>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="28d00212" class="elementor-element elementor-element-28d00212 elementor-column elementor-col-20 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div data-id="557b2a06" class="elementor-element elementor-element-557b2a06 elementor-align-center elementor-widget elementor-widget-icon-list" data-element_type="icon-list.default">
-                                      <div class="elementor-widget-container">
-                                        <ul class="elementor-icon-list-items">
-                                          <li class="elementor-icon-list-item">
-                                              <span class="elementor-icon-list-icon">
-                                                <i class="fa fa-institution" aria-hidden="true"></i>
-                                              </span>
-                                            <span class="elementor-icon-list-text"> Place - TBC </span>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="524d29b" class="elementor-element elementor-element-524d29b elementor-column elementor-col-20 elementor-inner-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-
-
-
-                        <!-- Workshop Program -->
-                        <section data-id="f84a406" class="elementor-element elementor-element-f84a406 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-
-                              <div class="elementor-container elementor-column-gap-default">
-                                <div class="col-xs-12">
-
-                                  <b>The final schedule will be announced here.</b>
-                                  <ul>
-                                    <li>13:20 pm - 13:30 pm: Opening remark</li>
-                                    <li>13:30 pm - 14:00 pm: Invited speaker 1</li>
-                                    <li>14:00 pm - 14:30 pm: Invited speaker 2</li>
-                                    <li>14:30 am - 15:00 am: Coffee break</li>
-                                    <li>15:00 am - 15:30 am: Invited speaker 3</li>
-                                    <li>15:30 am - 16:00 am: Invited speaker 4</li>
-                                    <li>16:00 am - 17:20 am: Posters</li>
-                                    <li>17:20 am - 17:30 pm: Closing remark</li>
-
-                                  </ul>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-                        </section>
-
-                        <!-- Important Dates -->
-                        <section data-id="f84a406" class="elementor-element elementor-element-f84a406 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-
-                              <div data-id="daa3063" class="elementor-element elementor-element-daa3063 elementor-column elementor-col-24 elementor-top-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-
-                                    <div data-id="3dbd198" class="elementor-element elementor-element-3dbd198 elementor-widget elementor-widget-heading" data-element_type="heading.default">
-                                      <div class="elementor-widget-container">
-                                        <h2 id="IMPORTANTDATES" class="elementor-heading-title elementor-size-default">IMPORTANT DATES</h2>
-                                      </div>
-                                    </div>
-
-                                    <table class="tg">
-                                      <tr>
-                                        <td class="tg-yw4l">Paper submission deadline:</td>
-                                        <td class="tg-yw4l">July 20, 2018</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-yw4l">Notification to Authors:</td>
-                                        <td class="tg-yw4l">August 3, 2018</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-yw4l">Camera ready deadline:</td>
-                                        <td class="tg-yw4l">August 6, 2018</td>
-                                      </tr>
-                                    </table>
-
-                                  </div>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-                        </section>
-
-                        <!-- Invited Speakers -->
-                        <section data-id="f84a406" class="elementor-element elementor-element-f84a406 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-
-                              <div data-id="daa3063" class="elementor-element elementor-element-daa3063 elementor-column elementor-col-24 elementor-top-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-
-                                    <div data-id="3dbd198" class="elementor-element elementor-element-3dbd198 elementor-widget elementor-widget-heading" data-element_type="heading.default">
-                                      <div class="elementor-widget-container">
-                                        <h2 id="INVITEDSPEAKERS" class="elementor-heading-title elementor-size-default">INVITED SPEAKERS</h2>
-                                      </div>
-                                    </div>
-
-
-                                    <table class="tg">
-
-                                      <tr>
-                                        <td class="tg-031e"><b>Aaron Hertzmann</b> is a Principal Scientist at Adobe Research. He is an ACM Distinguished Scientist and IEEE Senior Member and holds courtesy faculty appointments at University of Washington and University of Toronto. His research interest spans over computer graphics and computer vision. Also, his recent works in virtual reality user interfaces study in-headset VR video editing and review. His personal webpage is at: <a href="http://www.dgp.toronto.edu/~hertzman/index.html">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e"><b>Hideki Koike</b> is a Professor at Tokyo Institute of Technology. His research spans over human-computer interaction and computer security and reliability. Also, his recent works span over human interaction in omnidirectional spherical display from the aspect of view stabilization, tracking and projection applications. His webpage is at: <a href="http://www.vogue.cs.titech.ac.jp/">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e"><b>Shannon Chen</b> is a Research Scientist on the 360 Media team at Facebook. He is the inventor of the pyramid projection used by 360 video streaming and now contributing to dynamic streaming for Oculus Video and 360 Facebook videos. His personal webpage is at: <a href="https://research.fb.com/people/chen-shannon/">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e">(TBC) <b>Steve Seitz</b> is a Professor at University of Washington. His research focuses on computer vision and computer graphics. He was twice awarded the Marr Prize and has received an NSF Career Award, an ONR Young Investigator Award, and an Alfred P.,He is also a Director at Google and has led the development of Google Jump Camera and other VR projects. His webpage is at: <a href="https://homes.cs.washington.edu/~seitz/">Webpage</a></td>
-                                      </tr>
-                                      <!--
-                                      <tr>
-                                        <td class="tg-031e"><b>Keita Higuchi</b> is a Research Associate at University of Tokyo. His current research focuses on understanding group attention and activities by analyzing information gathered from multiple wearable devices, such as wearable cameras and eye trackers. Also, his recent works in immersive telepresence, remote collaboration and video browsing interface were accepted to CHI for three years in a row from 2015. His personal webpage is at: <a href="http://keihigu.github.io/">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e"><b>Daniel Cremers</b> is a Professor at Technical University of Munich. His research focuses on computer vision &amp; mathematical image analysis such as segmentation, motion estimation, multiview reconstruction, visual SLAM. He recently received the Gottfried Wilhelm Leibniz Award, the biggest award in German academia. He serves as general chair for the European Conference on Computer Vision 2018 in Munich. His webpage is at: <a href="https://vision.in.tum.de/members/cremers">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e"><b>Manohar Paluri</b> is a Research Lead in Facebook AI Research and Applied Machine Learning Group. He manages the computer vision group in Facebook that builds the Image and Video understanding platform using annotated and weakly annotated data. His webpage is at: <a href="https://research.fb.com/people/paluri-manohar/">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e"><b>Johannes Kopf</b> is a research scientist in the Facebook Computational Photography Group. His research covers a broad range of computer graphics and vision, including computational photography, video processing, and virtual reality. In particular, his recent works study 360° video stabilization and stereo photography using 360° cameras. His webpage is at: <a href="https://research.fb.com/people/kopf-johannes">Webpage</a></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="tg-031e"><b>Taco Cohen</b> is a machine learning researcher at Qualcomm. His research focuses on data-efficient deep learning and invariant/equivariant visual representation learning. In particular, he proposes learning CNN in the frequency domain to achieve rotational-invariant for spherical image analysis. His personal webpage is at: <a href="https://tacocohen.wordpress.com/">Webpage</a></td>
-                                      </tr>
-                                    -->
-                                    </table>
-
-                                  </div>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-                        </section>
-
-                        <!-- Organizing Committee -->
-                        <section data-id="f84a406" class="elementor-element elementor-element-f84a406 elementor-section-boxed  elementor-section-height-default elementor-section elementor-top-section" data-element_type="section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-
-                              <div data-id="daa3063" class="elementor-element elementor-element-daa3063 elementor-column elementor-col-24 elementor-top-column" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div data-id="3dbd198" class="elementor-element elementor-element-3dbd198 elementor-widget elementor-widget-heading" data-element_type="heading.default">
-                                      <div class="elementor-widget-container">
-                                        <h2 id="ORGANIZINGCOMMITTEE" class="elementor-heading-title elementor-size-default">ORGANIZING COMMITTEE</h2>
-                                      </div>
-                                    </div>
-
-                                    <section data-id="1627c52" class="elementor-element elementor-element-1627c52 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
-                                      <div class="elementor-container elementor-column-gap-default">
-                                        <div class="elementor-row">
-
-                                          <div data-id="edb0850" class="elementor-element elementor-element-edb0850 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-
-                                                <div data-id="18d7eb2" class="elementor-element elementor-element-18d7eb2 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-
-                                                      <a href="http://aliensunmin.github.io/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/MinSun.jpg" alt="" >
-                                                        </div>
-
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Min Sun</h3>
-                                                          <p class="elementor-image-box-description">National Tsing Hua University</p>
-                                                        </div>
-                                                      </a>
-
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div data-id="104c328" class="elementor-element elementor-element-104c328 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-
-                                                <div data-id="6004c1f" class="elementor-element elementor-element-6004c1f elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-
-                                                      <a href="https://www.cs.utexas.edu/~ycsu/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/YuChuanSu.jpg" alt="" >
-                                                        </div>
-
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Yu-Chuan Su</h3>
-                                                          <p class="elementor-image-box-description">University of Texas at Austin</p>
-                                                        </div>
-                                                      </a>
-
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div data-id="0e98067" class="elementor-element elementor-element-0e98067 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-
-                                              <div class="elementor-widget-wrap">
-                                                <div data-id="1018a45" class="elementor-element elementor-element-1018a45 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-
-                                                      <a href="https://graduatestudents.ucmerced.edu/wlai24/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/WeiShengLai.jpg" alt="" >
-                                                        </div>
-
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Wei-Sheng Lai</h3>
-                                                          <p class="elementor-image-box-description">University of California, Merced</p>
-                                                        </div>
-                                                      </a>
-
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div data-id="74ca087" class="elementor-element elementor-element-74ca087 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-
-                                                <div data-id="3351d2b" class="elementor-element elementor-element-3351d2b elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-                                                      <a href="https://people.cs.nctu.edu.tw/~liweichan/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/LiWeiChan.jpg" alt="" >
-                                                        </div>
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Liwei Chan</h3>
-                                                          <p class="elementor-image-box-description">National Chiao Tung University</p>
-                                                        </div>
-                                                      </a>
-
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                        </div>
-                                      </div>
-                                    </section>
-
-                                    <section data-id="e24d649" class="elementor-element elementor-element-e24d649 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
-                                      <div class="elementor-container elementor-column-gap-default">
-                                        <div class="elementor-row">
-
-                                          <div data-id="b996d1e" class="elementor-element elementor-element-b996d1e elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-
-                                                <div data-id="4e93ab4" class="elementor-element elementor-element-4e93ab4 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-                                                      <a href="https://eborboihuc.github.io/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/HouNingHu.jpg" alt="" >
-                                                        </div>
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Hou-Ning Hu</h3>
-                                                          <p class="elementor-image-box-description">National Tsing Hua University</p>
-                                                        </div>
-                                                      </a>
-
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-
-                                          <div data-id="6252609" class="elementor-element elementor-element-6252609 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-
-                                                <div data-id="321bb02" class="elementor-element elementor-element-321bb02 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-                                                      <a href="https://cvgl.stanford.edu/silvio/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/SilvioSavarese.jpg" alt="" >
-                                                        </div>
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Silvio Savarese</h3>
-                                                          <p class="elementor-image-box-description">Stanford University</p>
-                                                        </div>
-                                                      </a>
-
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div data-id="70ed254" class="elementor-element elementor-element-70ed254 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-                                                <div data-id="65686a7" class="elementor-element elementor-element-65686a7 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-                                                      <a href="https://www.cs.utexas.edu/users/grauman/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/KristenGrauman.jpg" alt="" >
-                                                        </div>
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Kristen Grauman</h3>
-                                                          <p class="elementor-image-box-description">University of Texas at Austin</p>
-                                                        </div>
-                                                      </a>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div data-id="b111f97" class="elementor-element elementor-element-b111f97 elementor-column elementor-col-24 elementor-inner-column" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                              <div class="elementor-widget-wrap">
-
-                                                <div data-id="59ca43d" class="elementor-element elementor-element-59ca43d elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="image-box.default">
-                                                  <div class="elementor-widget-container">
-                                                    <div class="elementor-image-box-wrapper">
-                                                      <a href="http://faculty.ucmerced.edu/mhyang/">
-                                                        <div class="elementor-image-box-img">
-                                                          <img style="margin: auto; height: 100px; max-width: 100px;" src="./asset/MingHsuanYang.jpg" alt="" >
-                                                        </div>
-                                                        <div class="elementor-image-box-content">
-                                                          <h3 class="elementor-image-box-title">Ming-Hsuan Yang</h3>
-                                                          <p class="elementor-image-box-description">University of California, Merced</p>
-                                                        </div>
-                                                      </a>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                        </div>
-                                      </div>
-                                    </section>
-
-                                  </div>
-                                </div>
-                              </div>
-                              <div data-id="8c8e152" class="elementor-element elementor-element-8c8e152 elementor-column elementor-col-24 elementor-top-column" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                  <div class="elementor-widget-wrap">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </section>
+    <div class="elementor elementor-11" style="margin: 0 5% 0 5%">
+
+      <!-- Introduction -->
+      <div>
+        <div>
+          <h2 id="INTRODUCTION" class="elementor-heading-title">
+            INTRODUCTION</h2>
+        </div>
+        <div class="elementor-widget-text-editor">
+          <div class="elementor-text-editor">
+            360° camera is a core building block of the Virtual Reality (VR) and Augmented
+            Reality (AR) technology that bridges the real and digital world. It allows us
+            to build the virtual environments for VR/AR applications from the real world
+            easily by capturing the entire visual world surrounding the camera
+            simultaneously. With the rapid growth of VR/AR technology, the availability
+            and popularity of 360° camera are also growing faster than ever. Many camera
+            manufacturers introduce new 360° camera models, both professional and
+            consumer-level, in the past few years. At the same time, content sharing sites
+            like YouTube and Facebook enable their support for 360° images and videos, and
+            content creators such as the news and movie industry start to exploit and
+            deliver the new media. People now create, share, and watch 360° content in our
+            everyday life just like any other media, and the amount of 360° content is
+            increasing rapidly.
+            Despite the popularity of 360° content, the new media remains relatively
+            unexplored from various aspects.
+            The difference between 360° images and traditional images introduces many new
+            challenges and opportunities, and the research community has just started to
+            explore them.
+
+            <br><br>
+
+            We believe that a workshop for research centering around 360° content can
+            greatly boost the research in the field and that this is the right time for
+            the workshop. The rapidly growing number of 360° content incurs an
+            unprecedented need of technologies to handle the new media, yet we still don’t
+            have a satisfactory solution to present, process or even encode this new
+            format. Researchers from various communities including computer vision, HCI,
+            multimedia, computer graphic and machine learning are working are working on
+            or interested in 360° related topic together. This will provide a forum to
+            discuss the current progress in the field and fost in this field with
+            overlapping directions independently. A major goal of this workshop will be to
+            bring researchers thater collaboration. It will also provide a good
+            introduction for researchers that are interested and want to start their
+            research in the field.
+
+            <br><br>
           </div>
         </div>
       </div>
+
+      <!-- Call for Papers -->
+      <div>
+        <div>
+          <h2 id="SUBMISSION" class="elementor-heading-title">SUBMISSION</h2>
+        </div>
+        <div class="elementor-widget-text-editor">
+          <div class="elementor-text-editor">
+            For the poster session, we invite submissions of <b>4 pages extended abstract</b> describing relevant work
+            that is unpublished, recently published, or presented in the main conference which allows participants to share research ideas
+            related to 360° vision.
+            The abstract should follow the <b><a href="https://eccv2018.org/papersubmission/author-guidelines/" Target="_blank">ECCV
+            format</a></b> (c.f. main conference authors guidelines).
+            Papers will be selected based on relevance, significance and novelty of results, technical merit, and
+            clarity of presentation.
+            These submissions will be reviewed blindly by our program committee.
+            The accepted extended abstract must be presented by one of the authors.
+
+            <br><br>
+
+            All the papers should be submitted using <b><a href="https://cmt3.research.microsoft.com/360PI2018/"
+                                                           Target="_blank">CMT website</a></b>.
+
+            <br><br>
+
+            The topic should be related to 360° content, including but not limited to:
+
+            <br><br>
+
+            <div style="margin: 0 50px">
+              <ul class="">
+                <li>User attention / saliency prediction in 360° video</li>
+                <li>Improving 360° video display</li>
+                <li>360° video stabilization</li>
+                <li>360° video summarization</li>
+                <li>Learning visual recognition model in 360° content (e.g., object detection, semantic segmentation,
+                  etc.)
+                </li>
+                <li>Learning CNN for spherical data</li>
+                <li>Visual features for 360° imagery</li>
+                <li>Depth and surface normal prediction using 360° images</li>
+                <li>Indoor localization / mapping using 360° camera</li>
+                <li>Robot navigation using 360° camera</li>
+                <li>Telepresence using 360° camera</li>
+                <li>Smart TV system for 360° videos</li>
+                <li>Video editing tool for 360° videos</li>
+                <li>Projection model for 360° imagery</li>
+                <li>360° specific video compression</li>
+                <li>360° video streaming</li>
+                <li>3D reconstruction using 360° camera</li>
+                <li>360° camera model</li>
+                <li>Novel applications for 360° imagery</li>
+                <li>360° image/video/audio dataset</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Dates -->
+      <div>
+        <div>
+          <h2 id="IMPORTANTDATES" class="elementor-heading-title">IMPORTANT DATES</h2>
+        </div>
+
+        <div style="text-align: center">
+          <table class="tg">
+            <tr>
+              <td class="tg-yw4l">Paper submission deadline:</td>
+              <td class="tg-yw4l">July 20<sup>th</sup>, 2018</td>
+            </tr>
+            <tr>
+              <td class="tg-yw4l">Review due date:</td>
+              <td class="tg-yw4l">August 3<sup>rd</sup>, 2018</td>
+            </tr>
+            <tr>
+              <td class="tg-yw4l">Notification to Authors:</td>
+              <td class="tg-yw4l">August 6<sup>th</sup>, 2018</td>
+            </tr>
+            <tr>
+              <td class="tg-yw4l">Workshop date:</td>
+              <td class="tg-yw4l">September 9<sup>th</sup>, 2018 (afternoon)</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Workshop Program -->
+      <div>
+        <div class="elementor-widget-container">
+          <h2 id="WORKSHOPPROGRAM" class="elementor-heading-title elementor-size-default">
+            WORKSHOP PROGRAM</h2>
+        </div>
+
+        <!-- Program Info -->
+        <div style="text-align: center">
+          <b>The final schedule will be announced here.</b>
+        </div>
+        <div style="text-align: center">
+          <table>
+            <tr>
+              <td>
+                September 9th Half day, TBC
+              </td>
+              <td>
+                Munich, Germany Place - TBC
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><b>Time:</b></td>
+              <td><b>Description:</b></td>
+            </tr>
+            <tr>
+              <td>13:20 pm - 13:30 pm:</td>
+              <td>Opening remark</td>
+            </tr>
+            <tr>
+              <td>13:30 pm - 14:00 pm:</td>
+              <td>Invited speaker 1</td>
+            </tr>
+            <tr>
+              <td>14:00 pm - 14:30 pm:</td>
+              <td>Invited speaker 2</td>
+            </tr>
+            <tr>
+              <td>14:30 am - 15:00 am:</td>
+              <td>Coffee break</td>
+            </tr>
+            <tr>
+              <td>15:00 am - 15:30 am:</td>
+              <td>Invited speaker 3</td>
+            </tr>
+            <tr>
+              <td>15:30 am - 16:00 am:</td>
+              <td>Invited speaker 4</td>
+            </tr>
+            <tr>
+              <td>16:00 am - 17:20 am:</td>
+              <td>Posters</td>
+            </tr>
+            <tr>
+              <td>17:20 am - 17:30 pm:</td>
+              <td>Closing remark</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+      <!-- Invited Speakers -->
+      <div>
+        <div>
+          <h2 id="INVITEDSPEAKERS" class="elementor-heading-title">INVITED SPEAKERS</h2>
+        </div>
+
+        <table class="tg">
+
+          <tr>
+            <td class="elementor-widget-image-box" width="25%">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="http://www.dgp.toronto.edu/~hertzman/index.html" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/AaronHertzmann.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Aaron Hertzmann</h3>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+            <td class="tg-031e"><b>Aaron Hertzmann</b> is a Principal Scientist at Adobe
+              Research. He is an ACM Distinguished Scientist and IEEE Senior Member and
+              holds courtesy faculty appointments at University of Washington and University
+              of Toronto. His research interest spans over computer graphics and computer
+              vision. Also, his recent works in virtual reality user interfaces study
+              in-headset VR video editing and review. His personal webpage is at:
+              <a href="http://www.dgp.toronto.edu/~hertzman/index.html" Target="_blank">Webpage</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="elementor-widget-image-box" width="25%">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="https://sites.google.com/site/koike/Home/Profile" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/HidekiKoike.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Hideki Koike</h3>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+            <td class="tg-031e"><b>Hideki Koike</b> is a Professor at Tokyo Institute of
+              Technology. His research spans over human-computer interaction and computer
+              security and reliability. Also, his recent works span over human interaction
+              in omnidirectional spherical display from the aspect of view stabilization,
+              tracking and projection applications. His webpage is at:
+              <a href="https://sites.google.com/site/koike/Home/Profile" Target="_blank">Webpage</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="elementor-widget-image-box" width="25%">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="https://research.fb.com/people/chen-shannon/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/ShannonChen.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Shannon Chen</h3>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+            <td class="tg-031e"><b>Shannon Chen</b> is a Research Scientist on the 360 Media
+              team at Facebook. He is the inventor of the pyramid projection used by 360
+              video streaming and now contributing to dynamic streaming for Oculus Video and
+              360 Facebook videos. His personal webpage is at:
+              <a href="https://research.fb.com/people/chen-shannon/" Target="_blank">Webpage</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="elementor-widget-image-box" width="25%">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="https://homes.cs.washington.edu/~seitz/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/StevenSeitz.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Steve Seitz</h3>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+            <td class="tg-031e">(TBC) <b>Steve Seitz</b> is a Professor at University of
+              Washington. His research focuses on computer vision and computer graphics. He
+              was twice awarded the Marr Prize and has received an NSF Career Award, an ONR
+              Young Investigator Award, and an Alfred P.,He is also a Director at Google and
+              has led the development of Google Jump Camera and other VR projects. His
+              webpage is at: <a href="https://homes.cs.washington.edu/~seitz/" Target="_blank">Webpage</a>
+            </td>
+          </tr>
+          <!--
+          <tr>
+            <td class="tg-031e"><b>Keita Higuchi</b> is a Research Associate at University of Tokyo. His current research focuses on understanding group attention and activities by analyzing information gathered from multiple wearable devices, such as wearable cameras and eye trackers. Also, his recent works in immersive telepresence, remote collaboration and video browsing interface were accepted to CHI for three years in a row from 2015. His personal webpage is at: <a href="http://keihigu.github.io/">Webpage</a></td>
+          </tr>
+          <tr>
+            <td class="tg-031e"><b>Daniel Cremers</b> is a Professor at Technical University of Munich. His research focuses on computer vision &amp; mathematical image analysis such as segmentation, motion estimation, multiview reconstruction, visual SLAM. He recently received the Gottfried Wilhelm Leibniz Award, the biggest award in German academia. He serves as general chair for the European Conference on Computer Vision 2018 in Munich. His webpage is at: <a href="https://vision.in.tum.de/members/cremers">Webpage</a></td>
+          </tr>
+          <tr>
+            <td class="tg-031e"><b>Manohar Paluri</b> is a Research Lead in Facebook AI Research and Applied Machine Learning Group. He manages the computer vision group in Facebook that builds the Image and Video understanding platform using annotated and weakly annotated data. His webpage is at: <a href="https://research.fb.com/people/paluri-manohar/">Webpage</a></td>
+          </tr>
+          <tr>
+            <td class="tg-031e"><b>Johannes Kopf</b> is a research scientist in the Facebook Computational Photography Group. His research covers a broad range of computer graphics and vision, including computational photography, video processing, and virtual reality. In particular, his recent works study 360° video stabilization and stereo photography using 360° cameras. His webpage is at: <a href="https://research.fb.com/people/kopf-johannes">Webpage</a></td>
+          </tr>
+          <tr>
+            <td class="tg-031e"><b>Taco Cohen</b> is a machine learning researcher at Qualcomm. His research focuses on data-efficient deep learning and invariant/equivariant visual representation learning. In particular, he proposes learning CNN in the frequency domain to achieve rotational-invariant for spherical image analysis. His personal webpage is at: <a href="https://tacocohen.wordpress.com/">Webpage</a></td>
+          </tr>
+        -->
+        </table>
+      </div>
+
+      <!-- Organizing Committee -->
+      <div>
+
+        <div>
+          <h2 id="ORGANIZINGCOMMITTEE" class="elementor-heading-title">ORGANIZING COMMITTEE</h2>
+        </div>
+
+        <table class="tg">
+          <tr>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="http://aliensunmin.github.io/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/MinSun.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Min Sun</h3>
+                    <p class="elementor-image-box-description">National Tsing Hua
+                      University</p>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="https://www.cs.utexas.edu/~ycsu/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/YuChuanSu.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Yu-Chuan Su</h3>
+                    <p class="elementor-image-box-description">University of Texas
+                      at Austin</p>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+
+                <a href="http://graduatestudents.ucmerced.edu/wlai24/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/WeiShengLai.jpg" alt="">
+                  </div>
+
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Wei-Sheng Lai</h3>
+                    <p class="elementor-image-box-description">University of
+                      California, Merced</p>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+                <a href="https://people.cs.nctu.edu.tw/~liweichan/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/LiWeiChan.jpg" alt="">
+                  </div>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Liwei Chan</h3>
+                    <p class="elementor-image-box-description">National Chiao Tung
+                      University</p>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+
+          </tr>
+          <tr>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+                <a href="https://eborboihuc.github.io/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/HouNingHu.jpg" alt="">
+                  </div>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Hou-Ning Hu</h3>
+                    <p class="elementor-image-box-description">National Tsing Hua
+                      University</p>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+                <a href="https://cvgl.stanford.edu/silvio/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/SilvioSavarese.jpg" alt="">
+                  </div>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Silvio Savarese</h3>
+                    <p class="elementor-image-box-description">Stanford
+                      University</p>
+                  </div>
+                </a>
+
+              </div>
+            </td>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+                <a href="https://www.cs.utexas.edu/users/grauman/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/KristenGrauman.jpg" alt="">
+                  </div>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Kristen Grauman</h3>
+                    <p class="elementor-image-box-description">University of Texas
+                      at Austin</p>
+                  </div>
+                </a>
+              </div>
+            </td>
+
+            <td class="elementor-widget-image-box">
+              <div class="elementor-image-box-wrapper">
+                <a href="http://faculty.ucmerced.edu/mhyang/" Target="_blank">
+                  <div class="elementor-image-box-img">
+                    <img style="margin: auto; height: 150px; max-width: 150px;"
+                         src="./asset/MingHsuanYang.jpg" alt="">
+                  </div>
+                  <div class="elementor-image-box-content">
+                    <h3 class="elementor-image-box-title">Ming-Hsuan Yang</h3>
+                    <p class="elementor-image-box-description">University of
+                      California, Merced</p>
+                  </div>
+                </a>
+              </div>
+            </td>
+
+          </tr>
+        </table>
+      </div>
+
     </div>
 
-    <!-- #content -->
-
-
+    <!-- footer -->
     <footer id="colophon" class="site-footer" role="contentinfo">
       <div class="wrap">
 
-        <aside class="widget-area" role="complementary" aria-label="Footer">
-          <div class="widget-column footer-widget-1">
-            <section id="text-5" class="widget widget_text">
-              <div class="textwidget"><p>2018 360PI - ECCV Workshop</p>
-              </div>
-            </section>
+        <div class="widget-column footer-widget-1">
+          <div class="textwidget"><p>2018 360PI - ECCV Workshop</p>
           </div>
-          <div class="widget-column footer-widget-1">
-            <section id="text-7" class="widget widget_text">
-              <div class="textwidget"><p>Contact: eborboihuc@gmail.com</p>
-              </div>
-               <div class="textwidget"><small><p>Video credits to <a href="https://www.youtube.com/watch?v=e3r-gVIf-qc">The New York Times</a></p></small>
-              </div>
-            </section>
+        </div>
+
+        <div class="widget-column footer-widget-1">
+          <div class="textwidget"><p>Contact: eborboihuc@gmail.com</p>
           </div>
+        </div>
 
+        <div class="widget-column footer-widget-1">
+          <small>Video credits to <a href="https://www.youtube.com/watch?v=e3r-gVIf-qc/" Target="_blank">The New York
+            Times</a>
+          </small>
+        </div>
 
-        </aside><!-- .widget-area -->
+        <div class="widget-column footer-widget-1">
+          <small><a href="https://wordpress.org/" Target="_blank" class="imprint">Template from WordPress</a>
+          </small>
+        </div>
 
-        <div class="site-info">
-          <a href="https://wordpress.org/" class="imprint">Proudly powered by WordPress	</a>
-        </div><!-- .site-info -->
       </div><!-- .wrap -->
 
     </footer><!-- #colophon -->
+
   </div><!-- .site-content-contain -->
 </div><!-- #page -->
 
-<script  src="./js/skip-link-focus-fix.js"></script>
-<script  src="./js/navigation.js"></script>
-<script  src="./js/global.js"></script>
-<script  src="./js/jquery.scrollTo.js"></script>
-<script  src="./js/wp-embed.min.js"></script>
-<script  src="./js/wp-a11y.min.js"></script>
-<script  src="./js/wp-custom-header.min.js"></script>
-<script  src="./js/position.min.js"></script>
-<script  src="./js/dialog.min.js"></script>
-<script  src="./js/waypoints.min.js"></script>
-<script  src="./js/swiper.jquery.min.js"></script>
-<script  src="./js/frontend.min.js"></script>
-
-
-<div id="wp-a11y-speak-polite" class="screen-reader-text">Video is playing.</div><div id="wp-a11y-speak-assertive" class="screen-reader-text"></div>
+<script src="./js/skip-link-focus-fix.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/global.js"></script>
+<script src="./js/jquery.scrollTo.js"></script>
+<script src="./js/wp-embed.min.js"></script>
+<script src="./js/wp-a11y.min.js"></script>
+<script src="./js/wp-custom-header.min.js"></script>
+<script src="./js/position.min.js"></script>
+<script src="./js/dialog.min.js"></script>
+<script src="./js/waypoints.min.js"></script>
+<script src="./js/swiper.jquery.min.js"></script>
+<script src="./js/frontend.min.js"></script>
 
 </body>
 </html>
