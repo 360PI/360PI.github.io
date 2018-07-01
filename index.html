@@ -18,6 +18,52 @@
   <script src="./js/wp-quicklatex-frontend.js"></script>
   <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
+  <script async src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    var player;
+    var videoId='e3r-gVIf-qc';
+    var startSeconds = 3;  // set your own video start time when loop play
+    var endSeconds = 77;   // set your own video end time when loop play
+    var playerConfig = {
+      height: '540',
+      width: '100%',
+      videoId: videoId,
+      playerVars: {
+
+        mute: 1,                // Mute the video
+        autoplay: 1,            // Auto-play the video on load
+        controls: 0,            // Show pause/play buttons in player
+        showinfo: 0,            // Hide the video title
+        rel: 0,                 // Hide the relative videos
+        modestbranding: 1,      // Hide the Youtube Logo
+        fs: 1,                  // Hide the full screen button
+        cc_load_policy: 0,      // Hide closed captions
+        iv_load_policy: 3,      // Hide the Video Annotations
+        start: startSeconds,
+        end: endSeconds,
+        autohide: 0, // Hide video controls when playing
+      },
+      events: {
+           'onStateChange': onStateChange,       // reference to Iframe API
+            onReady: function(e) {              // mute the video when loaded
+            e.target.mute();
+          }
+        }
+      };
+    //excute the video in div
+    function onYouTubePlayerAPIReady() {
+
+      player = new YT.Player('myvideo', playerConfig);
+
+    }
+    //repload the video when onStateChange=YT.PlayerState.ENDED)
+    function onStateChange(state) {
+      if (state.data === YT.PlayerState.ENDED) {
+        player.seekTo(startSeconds);
+      }
+    }
+  </script>
+
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
   <link rel="dns-prefetch" href="https://s.w.org/">
@@ -52,9 +98,7 @@
       <!-- https://developers.google.com/youtube/player_parameters -->
       <div class="custom-header-media">
         <div id="wp-custom-header" class="wp-custom-header">
-          <iframe width="1080" height="540"
-                  src="https://www.youtube.com/embed/e3r-gVIf-qc?autoplay=1&loop=1&mute=1&controls=0&rel=0&start=3&playlist=e3r-gVIf-qc"
-                  frameborder="0" allowfullscreen></iframe>
+          <div id="myvideo"></div>
         </div>
       </div>
 
