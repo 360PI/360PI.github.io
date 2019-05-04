@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!-- Thanks to url=https://www.aicitychallenge.org/ -->
+<!-- TODO: -->
+<!--  complete WORKSHOP pages -->
+
+
+<html lang="en-US" class="js svg background-fixed">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>360PI – 2019 ICCV WORKSHOP</title>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/sdm_wp_scripts.js"></script>
+  <script src="js/wp-quicklatex-frontend.js"></script>
+  <script>(function(html){html.className=html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+
+  <script async src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    var player;
+    var videoId='e3r-gVIf-qc';
+    var startSeconds = 3;  // set your own video start time when loop play
+    var endSeconds = 77;   // set your own video end time when loop play
+    var playerConfig = {
+      height: '540',
+      width: '100%',
+      videoId: videoId,
+      playerVars: {
+
+        mute: 1,                // Mute the video
+        autoplay: 1,            // Auto-play the video on load
+        controls: 0,            // Show pause/play buttons in player
+        showinfo: 0,            // Hide the video title
+        rel: 0,                 // Hide the relative videos
+        modestbranding: 1,      // Hide the Youtube Logo
+        fs: 1,                  // Hide the full screen button
+        cc_load_policy: 0,      // Hide closed captions
+        iv_load_policy: 3,      // Hide the Video Annotations
+        start: startSeconds,
+        end: endSeconds,
+        autohide: 0, // Hide video controls when playing
+      },
+      events: {
+           'onStateChange': onStateChange,       // reference to Iframe API
+            onReady: function(e) {              // mute the video when loaded
+            e.target.mute();
+          }
+        }
+      };
+    //excute the video in div
+    function onYouTubePlayerAPIReady() {
+
+      player = new YT.Player('myvideo', playerConfig);
+
+    }
+    //repload the video when onStateChange=YT.PlayerState.ENDED)
+    function onStateChange(state) {
+      if (state.data === YT.PlayerState.ENDED) {
+        player.seekTo(startSeconds);
+      }
+    }
+
+  </script>
+
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="dns-prefetch" href="https://s.w.org/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link rel="stylesheet" id="wp-quicklatex-format-css" href="css/quicklatex-format.css" media="all">
+  <link rel="stylesheet" id="sdm-styles-css" href="css/sdm_wp_styles.css" media="all">
+  <link rel="stylesheet" id="uaf_client_css-css" href="css/uaf.css" media="all">
+  <link rel="stylesheet" id="twentyseventeen-fonts-css" href="css/font_latin.css" media="all">
+  <link rel="stylesheet" id="twentyseventeen-style-css" href="css/style.css" media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="css/font-awesome.min.css" media="all">
+  <link rel="stylesheet" id="elementor-animations-css" href="css/animations.min.css" media="all">
+  <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" media="all">
+  <link rel="stylesheet" id="elementor-global-css" href="css/global.css" media="all">
+  <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" media="all">
+  <link rel="stylesheet" id="elementor-post-11-css" href="css/post-11.css" media="all">
+  <link rel="stylesheet" id="google-fonts-1-css" href="css/font_cy.css" media="all">
+  <link rel="canonical" href="https://360PI.github.io/">
+  <link rel="shortlink" href="https://360PI.github.io/">
+
+</head>
+
+<body class="twentyseventeen-front-page has-header-video">
+
+<div id="HOME" class="centerContainer">
+  <!-- header -->
+  <header id="header" class="site-header" role="banner">
+
+    <div class="custom-header" style="margin-bottom: 72px;">
+
+      <!-- Video -->
+      <!-- e3r-gVIf-qc.mp4, QYDY_8lL89E.mp4 -->
+      <!-- https://developers.google.com/youtube/player_parameters -->
+      <div class="custom-header-media">
+        <div id="myvideo"></div>
+      </div>
+
+      <div class="site-branding">
+        <div class="wrap">
+          <h1 class="site-title"><a href="#INTRODUCTION" rel="home">360° Perception and Interaction</a></h1>
+          <p class="site-description">October 27<sup>th</sup> @ ICCV Workshop
+            2019 in Seoul, Korea</p>
+        </div><!-- .wrap -->
+      </div><!-- .site-branding -->
+
+    </div><!-- .custom-header -->
+
+    <div class="navigation-top">
+      <div class="wrap">
+        <nav id="site-navigation" class="main-navigation">
+
+          <!-- Floating menu -->
+          <button class="menu-toggle">
+            Menu
+          </button>
+
+          <ul id="top-menu" class="menu">
+            <li id="pageitem" class="menu-item"><a href="https://360pi.github.io/">360PI</a></li>
+            <li></li>
+            <li id="homeitem" class="menu-item"><a href="#HOME">HOME</a></li>
+            <li id="introductionitem" class="menu-item"><a href="#INTRODUCTION">INTRODUCTION</a></li>
+            <li id="papersitem" class="menu-item"><a href="#SUBMISSION">SUBMISSION</a></li>
+            <li id="workshopitem" class="menu-item"><a href="#WORKSHOPPROGRAM">PROGRAM</a></li>
+            <li id="datesitem" class="menu-item"><a href="#IMPORTANTDATES">DATES</a></li>
+            <!--
+            <li id="posteritem" class="menu-item"><a href="#POSTERS">POSTERS</a></li>
+            -->
+
+            <li id="submenu" class="menu-item-has-children">
+              <a>INFO</a>
+              <ul class="sub-menu">
+                <!--
+                <li id="speakersitem" class="menu-item"><a href="#INVITEDSPEAKERS">Invited Speakers</a></li>
+                -->
+                <li id="committeeitem" class="menu-item"><a href="#ORGANIZINGCOMMITTEES">Organizing Committee</a></li>
+                <li id="contactitem" class="menu-item"><a href="#CONTACT">Contact Us</a></li>
+                <li id="previousitem" class="menu-item"><a
+                        href="https://360pi.github.io/eccv2018">1st
+                  Workshop</a></li>
+                <li id="iccvitem" class="menu-item"><a href="http://iccv2019.thecvf.com/program/overview">ICCV
+                  Workshop</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </nav><!-- #site-navigation -->
+      </div><!-- .wrap -->
+    </div><!-- .navigation-top -->
+
+  </header><!-- #masthead -->
+
+  <!-- content -->
+  <div class="site-content-contain">
+    <div class="elementor elementor-11" style="margin: 0 5% 0 5%">
+
+      <!-- Introduction -->
+      <div>
+        <div>
+          <h2 id="INTRODUCTION" class="elementor-heading-title">
+            INTRODUCTION</h2>
+        </div>
+        <div class="elementor-widget-text-editor">
+          <div class="elementor-text-editor">
+            360° camera is a core building block of the Virtual Reality (VR) and Augmented
+            Reality (AR) technology that bridges the real and digital world. It allows us
+            to build the virtual environments for VR/AR applications from the real world
+            easily by capturing the entire visual world surrounding the camera
+            simultaneously. With the rapid growth of VR/AR technology, the availability
+            and popularity of 360° camera are also growing faster than ever. Many camera
+            manufacturers introduce new 360° camera models, both professional and
+            consumer-level, in the past few years. At the same time, content sharing sites
+            like YouTube and Facebook enable their support for 360° images and videos, and
+            content creators such as the news and movie industry start to exploit and
+            deliver the new media. People now create, share, and watch 360° content in our
+            everyday life just like any other media, and the amount of 360° content is
+            increasing rapidly.
+            Despite the popularity of 360° content, the new media remains relatively
+            unexplored from various aspects.
+            The difference between 360° images and traditional images introduces many new
+            challenges and opportunities, and the research community has just started to
+            explore them.
+
+            <br><br>
+
+            We believe that a workshop for research centering around 360° content can
+            greatly boost the research in the field and that this is the right time for
+            the workshop. The rapidly growing number of 360° content incurs an
+            unprecedented need of technologies to handle the new media, yet we still don’t
+            have a satisfactory solution to present, process or even encode this new
+            format. Researchers from various communities including computer vision, HCI,
+            multimedia, computer graphic and machine learning are working are working on
+            or interested in 360° related topic together. This will provide a forum to
+            discuss the current progress in the field and fost in this field with
+            overlapping directions independently. A major goal of this workshop will be to
+            bring researchers thater collaboration. It will also provide a good
+            introduction for researchers that are interested and want to start their
+            research in the field.
+
+            <br><br>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call for Papers -->
+      <div>
+        <div>
+          <h2 id="SUBMISSION" class="elementor-heading-title">SUBMISSION</h2>
+        </div>
+        <div class="elementor-widget-text-editor">
+          <div>
+
+            For the poster session, we invite submissions of maximum <b>4 pages extended abstract including
+            reference</b> describing relevant work that is unpublished, recently published, or presented in the main
+            conference which allows participants to share research ideas related to 360° vision.
+            The abstract should follow the <b><a href="http://iccv2019.thecvf.com/submission/main_conference/author_guidelines"
+                                                 Target="_blank">ICCV format</a></b>
+            (c.f. main conference authors guidelines).
+            Papers will be selected based on relevance, significance and novelty of results, technical merit, and
+            clarity of presentation.
+            These submissions will be reviewed blindly by our program committee.
+            The accepted extended abstract are invited to present in the poster session of the workshop by one of the
+            authors.
+
+            <br><br>
+
+
+            The topic should be related to 360° content, including but not limited to:
+
+            <br><br>
+
+            <div style="margin: 0 50px">
+              <ul>
+                <li>User attention / saliency prediction in 360° video</li>
+                <li>Improving 360° video display</li>
+                <li>360° video stabilization</li>
+                <li>360° video summarization</li>
+                <li>Learning visual recognition model in 360° content (e.g., object detection, semantic segmentation,
+                  etc.)
+                </li>
+                <li>Learning CNN for spherical data</li>
+                <li>Visual features for 360° imagery</li>
+                <li>Depth and surface normal prediction using 360° images</li>
+                <li>Indoor localization / mapping using 360° camera</li>
+                <li>Robot navigation using 360° camera</li>
+                <li>Telepresence using 360° camera</li>
+                <li>Smart TV system for 360° videos</li>
+                <li>Video editing tool for 360° videos</li>
+                <li>Projection model for 360° imagery</li>
+                <li>360° specific video compression</li>
+                <li>360° video streaming</li>
+                <li>3D reconstruction using 360° camera</li>
+                <li>360° camera model</li>
+                <li>Novel applications for 360° imagery</li>
+                <li>360° image/video/audio dataset</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Dates -->
+      <div>
+        <div>
+          <h2 id="IMPORTANTDATES" class="elementor-heading-title">IMPORTANT DATES</h2>
+        </div>
+
+        <div class="elementor-widget-text-editor">
+          <div style="text-align: center">
+            <table class="tg">
+              <tr>
+                <td class="tg-yw4l">Paper submission deadline:</td>
+                <td class="tg-yw4l">July 29<sup>th</sup>, 2019
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">Notification to Authors:</td>
+                <td class="tg-yw4l">August 16<sup>th</sup>, 2019</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">Workshop date:</td>
+                <td class="tg-yw4l">October 27<sup>th</sup>, 2019
+                  (morning)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workshop Program -->
+      <div>
+        <div class="elementor-widget-container">
+          <h2 id="WORKSHOPPROGRAM" class="elementor-heading-title elementor-size-default">
+            WORKSHOP PROGRAM</h2>
+        </div>
+
+        <!-- Program Info -->
+
+        <div class="elementor-widget-text-editor">
+          <div style="text-align: center">
+            <table>
+              <tr>
+                <td>October 27th Half day, AM</td>
+                <td colspan="3">Seoul, Korea - <a
+                        href="https://www.coexcenter.com/">COEX Convention Center</a></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><b>Time:</b></td>
+                <td colspan="3"><b>Description:</b></td>
+              </tr>
+              <tr>
+                <td>TBA</td>
+                <td>TBA</td>
+                <td>TBA</td>
+              </tr>
+
+              <!--
+              <tr>
+                <td><b>Time:</b></td>
+                <td colspan="3"><b>Description:</b></td>
+              </tr>
+              <tr>
+                <td>13:20 pm - 13:30 pm</td>
+                <td>Opening remark</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>13:30 pm - 14:00 pm</td>
+                <td>Invited Talk</td>
+                <td colspan="2">Speaker: <a href="#S1">Speaker1</a><br>Title:
+                 Title1</td>
+              </tr>
+              <tr>
+                <td>14:00 pm - 14:30 pm</td>
+                <td>Invited Talk</td>
+                <td colspan="2">Speaker: <a href="#S2">Speaker2</a><br>Title:
+                 Title2</td>
+              </tr>
+              <tr>
+                <td>14:30 pm - 15:00 pm</td>
+                <td>Coffee break</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>15:00 pm - 15:30 pm</td>
+                <td>Invited Talk</td>
+                <td colspan="2">Speaker: <a href="#S3">Speaker3</a><br>Title:
+                 Title3</td>
+              </tr>
+              <tr>
+                <td>15:30 pm - 16:00 pm</td>
+                <td>Invited Talk</td>
+                <td colspan="2">Speaker: <a href="#S4">Speaker4</a><br>Title:
+                 Title4</td>
+              </tr>
+              <tr>
+                <td>16:00 pm - 17:30 pm</td>
+                <td>Posters</td>
+                <td><a href="#POSTERS">Poster Lists</a></td>
+              </tr>
+              <tr>
+                <td>17:30 pm - 17:40 pm</td>
+                <td>Closing remark</td>
+                <td></td>
+              </tr>
+              -->
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper Lists -->
+      <!--
+      <div>
+        <div>
+          <h2 id="POSTERS" class="elementor-heading-title">POSTER LISTS</h2>
+        </div>
+        <div class="elementor-widget-text-editor">
+          <div>
+            <table>
+
+              <tr>
+                <td><b>Title:</b></td>
+                <td colspan="3"><b>Authors:</b></td>
+              </tr>
+              <tr>
+                <td>TBA</td>
+                <td>TBA</td>
+              </tr>
+
+            </table>
+
+
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- Invited Speakers -->
+      <!--
+      <div>
+        <div>
+          <h2 id="INVITEDSPEAKERS" class="elementor-heading-title">INVITED SPEAKERS</h2>
+        </div>
+
+        <div class="elementor-widget-text-editor">
+          <table class="tg">
+
+            <tr>
+              <td id="S1" class="elementor-widget-image-box" width="25%">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="#" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/placeholder.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Spearker1</h3>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+              <td class="tg-031e"><b>Speaker1</b> is our speaker.
+              </td>
+            </tr>
+
+            <tr>
+              <td id="S2" class="elementor-widget-image-box" width="25%">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="#" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/placeholder.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Spearker2</h3>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+              <td class="tg-031e"><b>Speaker2</b> is our speaker.
+              </td>
+            </tr>
+
+            <tr>
+              <td id="S3" class="elementor-widget-image-box" width="25%">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="#" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/placeholder.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Spearker3</h3>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+              <td class="tg-031e"><b>Speaker3</b> is our speaker.
+              </td>
+            </tr>
+
+            <tr>
+              <td id="S4" class="elementor-widget-image-box" width="25%">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="#" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/placeholder.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Spearker4</h3>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+              <td class="tg-031e"><b>Speaker4</b> is our speaker.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      -->
+
+      <!-- Organizing Committee -->
+      <div>
+
+        <div>
+          <h2 id="ORGANIZINGCOMMITTEES" class="elementor-heading-title">ORGANIZING COMMITTEES</h2>
+        </div>
+
+        <div class="elementor-widget-text-editor">
+          <table class="tg">
+            <tr>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="http://aliensunmin.github.io/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/MinSun.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Min Sun</h3>
+                      <p class="elementor-image-box-description">National Tsing Hua
+                        University</p>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="https://www.cs.utexas.edu/~ycsu/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/YuChuanSu.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Yu-Chuan Su</h3>
+                      <p class="elementor-image-box-description">University of Texas
+                        at Austin</p>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+
+                  <a href="http://graduatestudents.ucmerced.edu/wlai24/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/WeiShengLai.jpg" alt="">
+                    </div>
+
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Wei-Sheng Lai</h3>
+                      <p class="elementor-image-box-description">University of
+                        California, Merced</p>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+                  <a href="https://people.cs.nctu.edu.tw/~liweichan/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/LiWeiChan.jpg" alt="">
+                    </div>
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Liwei Chan</h3>
+                      <p class="elementor-image-box-description">National Chiao Tung
+                        University</p>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+
+            </tr>
+            <tr>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+                  <a href="https://eborboihuc.github.io/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/HouNingHu.jpg" alt="">
+                    </div>
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Hou-Ning Hu</h3>
+                      <p class="elementor-image-box-description">National Tsing Hua
+                        University</p>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+                  <a href="https://cvgl.stanford.edu/silvio/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/SilvioSavarese.jpg" alt="">
+                    </div>
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Silvio Savarese</h3>
+                      <p class="elementor-image-box-description">Stanford
+                        University</p>
+                    </div>
+                  </a>
+
+                </div>
+              </td>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+                  <a href="https://www.cs.utexas.edu/users/grauman/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/KristenGrauman.jpg" alt="">
+                    </div>
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Kristen Grauman</h3>
+                      <p class="elementor-image-box-description">University of Texas
+                        at Austin</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+
+              <td class="elementor-widget-image-box">
+                <div class="elementor-image-box-wrapper">
+                  <a href="http://faculty.ucmerced.edu/mhyang/" Target="_blank">
+                    <div class="elementor-image-box-img">
+                      <img style="margin: auto; height: 150px; max-width: 150px;"
+                           src="asset/MingHsuanYang.jpg" alt="">
+                    </div>
+                    <div class="elementor-image-box-content">
+                      <h3 class="elementor-image-box-title">Ming-Hsuan Yang</h3>
+                      <p class="elementor-image-box-description">University of
+                        California, Merced</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Contact Us -->
+      <div>
+
+        <div>
+          <h2 id="CONTACT" class="elementor-heading-title">CONTACT US</h2>
+        </div>
+
+        <div class="elementor-widget-text-editor" align="center">
+          Point of Contact:
+          <p>Yu Chuan Su</p>
+          <p>University of Texas at Austin</p>
+          <p>Email: <a href="mailto:ycsu@cs.utexas.edu">ycsu@cs.utexas.edu</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="wrap">
+
+        <div class="widget-column footer-widget-1">
+          <div class="textwidget"><p>2nd 360PI Workshop - ICCV 2019</p>
+          </div>
+        </div>
+
+        <div class="widget-column footer-widget-1">
+          <div class="textwidget"><p>Contact: eborboihuc@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="widget-column footer-widget-1">
+          <small><a href="https://wordpress.org/" Target="_blank" class="imprint">Template from WordPress</a>
+          </small>
+        </div>
+
+        <div class="widget-column footer-widget-1">
+          <small>The CC-licensed Video credits to <a href="https://www.youtube.com/watch?v=e3r-gVIf-qc/"
+                                                     Target="_blank">The New York
+            Times</a>
+          </small>
+        </div>
+
+      </div><!-- .wrap -->
+
+    </footer><!-- #colophon -->
+
+  </div><!-- .site-content-contain -->
+</div><!-- #page -->
+
+<script src="js/skip-link-focus-fix.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/wp-embed.min.js"></script>
+<script src="js/wp-a11y.min.js"></script>
+<script src="js/wp-custom-header.min.js"></script>
+<script src="js/position.min.js"></script>
+<script src="js/dialog.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/frontend.min.js"></script>
+
+</body>
+</html>

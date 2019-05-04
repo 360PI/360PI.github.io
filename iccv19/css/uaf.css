@@ -1,0 +1,16 @@
+			@font-face {
+				font-family: 'dinpro-regular';
+				font-style: normal;
+				src: url('/wp-content/uploads/useanyfont/171210105522DINpro-regular.eot');
+				src: local('dinpro-regular'), url('/wp-content/uploads/useanyfont/171210105522DINpro-regular.eot') format('embedded-opentype'), url('/wp-content/uploads/useanyfont/171210105522DINpro-regular.woff') format('woff');
+			}
+            
+            .dinpro-regular{font-family: 'dinpro-regular' !important;}
+            
+						body, h1, h2, h3, h4, h5, h6, p, blockquote, li, a{
+					font-family: 'dinpro-regular' !important;
+				}
+						body{
+					font-family: 'dinpro-regular' !important;
+				}
+		
