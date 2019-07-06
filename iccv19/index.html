@@ -14,52 +14,56 @@
   <script src="js/jquery-migrate.min.js"></script>
   <script src="js/sdm_wp_scripts.js"></script>
   <script src="js/wp-quicklatex-frontend.js"></script>
-  <script>(function(html){html.className=html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+  <script>(function (html) {
+      html.className = html.className.replace(/\bno-js\b/, 'js')
+  })(document.documentElement);</script>
 
   <script async src="https://www.youtube.com/iframe_api"></script>
   <script>
-    var player;
-    var videoId='e3r-gVIf-qc';
-    var startSeconds = 3;  // set your own video start time when loop play
-    var endSeconds = 77;   // set your own video end time when loop play
-    var playerConfig = {
-      height: '540',
-      width: '100%',
-      videoId: videoId,
-      playerVars: {
+      var player;
+      var videoId = 'e3r-gVIf-qc';
+      var startSeconds = 3;  // set your own video start time when loop play
+      var endSeconds = 77;   // set your own video end time when loop play
+      var playerConfig = {
+          height: '540',
+          width: '100%',
+          videoId: videoId,
+          playerVars: {
 
-        mute: 1,                // Mute the video
-        autoplay: 1,            // Auto-play the video on load
-        controls: 0,            // Show pause/play buttons in player
-        showinfo: 0,            // Hide the video title
-        rel: 0,                 // Hide the relative videos
-        modestbranding: 1,      // Hide the Youtube Logo
-        fs: 0,                  // Hide the full screen button
-        cc_load_policy: 0,      // Hide closed captions
-        iv_load_policy: 3,      // Hide the Video Annotations
-        start: startSeconds,
-        end: endSeconds,
-        autohide: 0, // Hide video controls when playing
-      },
-      events: {
-           'onStateChange': onStateChange,       // reference to Iframe API
-            onReady: function(e) {              // mute the video when loaded
-            e.target.mute();
+              mute: 1,                // Mute the video
+              autoplay: 1,            // Auto-play the video on load
+              controls: 0,            // Show pause/play buttons in player
+              showinfo: 0,            // Hide the video title
+              rel: 0,                 // Hide the relative videos
+              modestbranding: 1,      // Hide the Youtube Logo
+              fs: 0,                  // Hide the full screen button
+              cc_load_policy: 0,      // Hide closed captions
+              iv_load_policy: 3,      // Hide the Video Annotations
+              start: startSeconds,
+              end: endSeconds,
+              autohide: 0, // Hide video controls when playing
+          },
+          events: {
+              'onStateChange': onStateChange,       // reference to Iframe API
+              onReady: function (e) {              // mute the video when loaded
+                  e.target.mute();
+              }
           }
-        }
       };
-    //excute the video in div
-    function onYouTubePlayerAPIReady() {
 
-      player = new YT.Player('myvideo', playerConfig);
+      //excute the video in div
+      function onYouTubePlayerAPIReady() {
 
-    }
-    //repload the video when onStateChange=YT.PlayerState.ENDED)
-    function onStateChange(state) {
-      if (state.data === YT.PlayerState.ENDED) {
-        player.seekTo(startSeconds);
+          player = new YT.Player('myvideo', playerConfig);
+
       }
-    }
+
+      //repload the video when onStateChange=YT.PlayerState.ENDED)
+      function onStateChange(state) {
+          if (state.data === YT.PlayerState.ENDED) {
+              player.seekTo(startSeconds);
+          }
+      }
 
   </script>
 
@@ -103,7 +107,7 @@
         <div class="wrap">
           <h1 class="site-title"><a href="#INTRODUCTION" rel="home">360° Perception and Interaction</a></h1>
           <p class="site-description">October 27<sup>th</sup> @ ICCV Workshop
-            2019 in Seoul, Korea</p>
+                                      2019 in Seoul, Korea</p>
         </div><!-- .wrap -->
       </div><!-- .site-branding -->
 
@@ -133,16 +137,17 @@
             <li id="submenu" class="menu-item-has-children">
               <a>INFO</a>
               <ul class="sub-menu">
-                <!--
                 <li id="speakersitem" class="menu-item"><a href="#INVITEDSPEAKERS">Invited Speakers</a></li>
-                -->
-                <li id="committeeitem" class="menu-item"><a href="#ORGANIZINGCOMMITTEES">Organizing Committee</a></li>
+                <li id="committeeitem" class="menu-item"><a href="#ORGANIZINGCOMMITTEES">Organizing
+                                                                                         Committee</a>
+                </li>
                 <li id="contactitem" class="menu-item"><a href="#CONTACT">Contact Us</a></li>
                 <li id="previousitem" class="menu-item"><a
-                        href="https://360pi.github.io/eccv18">1st
-                  Workshop</a></li>
-                <li id="iccvitem" class="menu-item"><a href="http://iccv2019.thecvf.com/program/overview">ICCV
-                  Workshop</a></li>
+                    href="https://360pi.github.io/eccv18">1st
+                                                          Workshop</a></li>
+                <li id="iccvitem" class="menu-item"><a
+                    href="http://iccv2019.thecvf.com/program/workshops">ICCV
+                                                                       Workshop</a></li>
               </ul>
             </li>
 
@@ -215,16 +220,25 @@
           <div>
 
             For the poster session, we invite submissions of maximum <b>4 pages extended abstract including
-            reference</b> describing relevant work that is unpublished, recently published, or presented in the main
+                                                                        reference</b> describing relevant
+            work that is unpublished, recently published, or presented in the main
             conference which allows participants to share research ideas related to 360° vision.
-            The abstract should follow the <b><a href="http://iccv2019.thecvf.com/submission/main_conference/author_guidelines"
-                                                 Target="_blank">ICCV format</a></b>
+            The abstract should follow the <b><a
+              href="http://iccv2019.thecvf.com/submission/main_conference/author_guidelines"
+              target="_blank">ICCV format</a></b>
             (c.f. main conference authors guidelines).
-            Papers will be selected based on relevance, significance and novelty of results, technical merit, and
+            Papers will be selected based on relevance, significance and novelty of results, technical
+            merit, and
             clarity of presentation.
-            These submissions will be reviewed blindly by our program committee.
-            The accepted extended abstract are invited to present in the poster session of the workshop by one of the
+            These submissions will be reviewed <b>double-blindly</b> by invited reviewers.
+            Among the submissions, 2 will be selected as oral presentation by the program committee.
+            The accepted extended abstract are invited to present in the poster session of the workshop by
+            one of the
             authors.
+
+            <br><br>
+
+            All the papers should be submitted using CMT website: https://cmt3.research.microsoft.com/360PI2019/.
 
             <br><br>
 
@@ -239,8 +253,9 @@
                 <li>Improving 360° video display</li>
                 <li>360° video stabilization</li>
                 <li>360° video summarization</li>
-                <li>Learning visual recognition model in 360° content (e.g., object detection, semantic segmentation,
-                  etc.)
+                <li>Learning visual recognition model in 360° content (e.g., object detection, semantic
+                    segmentation,
+                    etc.)
                 </li>
                 <li>Learning CNN for spherical data</li>
                 <li>Visual features for 360° imagery</li>
@@ -274,22 +289,23 @@
           <div style="text-align: center">
             <table class="tg">
               <tr>
-                <td class="tg-yw4l">Paper submission deadline:</td>
-                <td class="tg-yw4l">July 29<sup>th</sup>, 2019
+                <td>Paper submission deadline:</td>
+                <td>July 29<sup>th</sup>, 2019
                 </td>
               </tr>
               <tr>
-                <td class="tg-yw4l">Notification to Authors:</td>
-                <td class="tg-yw4l">August 23<sup>th</sup>, 2019</td>
+                <td>Notification to Authors:</td>
+                <td>August 23<sup>th</sup>, 2019</td>
               </tr>
               <tr>
-                <td class="tg-yw4l">Camera-ready Deadline:</td>
-                <td class="tg-yw4l">August 30<sup>th</sup>, 2019</td>
+                <td>Camera-ready Deadline:</td>
+                <td>August 30<sup>th</sup>, 2019</td>
               </tr>
               <tr>
-                <td class="tg-yw4l">Workshop date:</td>
-                <td class="tg-yw4l">October 27<sup>th</sup>, 2019
-                  (morning)</td>
+                <td>Workshop date:</td>
+                <td>October 27<sup>th</sup>, 2019
+                                    (morning)
+                </td>
               </tr>
             </table>
           </div>
@@ -311,7 +327,7 @@
               <tr>
                 <td>October 27th Half day, AM</td>
                 <td colspan="3">Seoul, Korea - <a
-                        href="https://www.coexcenter.com/">COEX Convention Center</a></td>
+                    href="https://www.coexcenter.com/">COEX Convention Center</a></td>
               </tr>
 
               <tr>
@@ -411,33 +427,39 @@
       -->
 
       <!-- Invited Speakers -->
-      <!--
       <div>
         <div>
           <h2 id="INVITEDSPEAKERS" class="elementor-heading-title">INVITED SPEAKERS</h2>
         </div>
 
         <div class="elementor-widget-text-editor">
-          <table class="tg">
-
+          <table>
             <tr>
               <td id="S1" class="elementor-widget-image-box" width="25%">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="#" Target="_blank">
+                  <a href="http://vision.snu.ac.kr/~gunhee/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
-                           src="asset/placeholder.jpg" alt="">
+                           src="asset/GunHeeKim.jpg" alt="">
                     </div>
 
                     <div class="elementor-image-box-content">
-                      <h3 class="elementor-image-box-title">Spearker1</h3>
+                      <h3 class="elementor-image-box-title">Gunhee Kim</h3>
                     </div>
                   </a>
 
                 </div>
               </td>
-              <td class="tg-031e"><b>Speaker1</b> is our speaker.
+              <td><b>Gunhee Kim</b> is a Professor at Seoul National University. His research interests
+                                    are solving computer vision and web mining problems that emerge from
+                                    big image and video data shared online, by developing scalable and
+                                    effective machine learning and optimization techniques. In particular,
+                                    his recent works study story-based summarization for 360° videos. He
+                                    is a recipient of 2014 ACM SIGKDD doctoral dissertation award, and
+                                    2015 Naver New faculty award. His webpage is at:
+                <a href="http://vision.snu.ac.kr/~gunhee/" target="_blank">http://vision.snu.ac.kr/~gunhee/</a>
+
               </td>
             </tr>
 
@@ -445,28 +467,42 @@
               <td id="S2" class="elementor-widget-image-box" width="25%">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="#" Target="_blank">
+                  <a href="https://jhugestar.github.io/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
-                           src="asset/placeholder.jpg" alt="">
+                           src="asset/HanByulJoo.jpg" alt="">
                     </div>
 
                     <div class="elementor-image-box-content">
-                      <h3 class="elementor-image-box-title">Spearker2</h3>
+                      <h3 class="elementor-image-box-title">Hanbyul Joo</h3>
                     </div>
                   </a>
 
                 </div>
               </td>
-              <td class="tg-031e"><b>Speaker2</b> is our speaker.
+              <td><b>Hanbyul Joo</b> is a Research Scientist at Facebook AI Research
+                                                     (FAIR). His research focuses on measuring social
+                                                     signals in interpersonal social communication to
+                                                     computationally model social behavior. He developed a
+                                                     unique sensing system at CMU, the Panoptic Studio,
+                                                     which is designed to capture social interaction using
+                                                     more than 500 synchronized cameras. His research has
+                                                     been covered in various media outlets including
+                                                     Discovery, Reuters, IEEE Spectrum, NBC News, Voice of
+                                                     America, The Verge, and WIRED. He is a recipient of
+                                                     the Samsung Scholarship and CVPR Best Student Paper
+                                                     Award in 2018. His webpage is at:
+                <a href="https://jhugestar.github.io/"
+                   target="_blank">https://jhugestar.github.io/</a>
               </td>
             </tr>
 
+            <!--
             <tr>
               <td id="S3" class="elementor-widget-image-box" width="25%">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="#" Target="_blank">
+                  <a href="#" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/placeholder.jpg" alt="">
@@ -487,7 +523,7 @@
               <td id="S4" class="elementor-widget-image-box" width="25%">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="#" Target="_blank">
+                  <a href="#" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/placeholder.jpg" alt="">
@@ -503,10 +539,10 @@
               <td class="tg-031e"><b>Speaker4</b> is our speaker.
               </td>
             </tr>
+            -->
           </table>
         </div>
       </div>
-      -->
 
       <!-- Organizing Committee -->
       <div>
@@ -522,7 +558,7 @@
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="http://aliensunmin.github.io/" Target="_blank">
+                  <a href="http://aliensunmin.github.io/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/MinSun.jpg" alt="">
@@ -531,7 +567,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Min Sun</h3>
                       <p class="elementor-image-box-description">National Tsing Hua
-                        University</p>
+                                                                 University</p>
                     </div>
                   </a>
 
@@ -541,7 +577,7 @@
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="https://www.cs.utexas.edu/~ycsu/" Target="_blank">
+                  <a href="https://www.cs.utexas.edu/~ycsu/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/YuChuanSu.jpg" alt="">
@@ -550,7 +586,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Yu-Chuan Su</h3>
                       <p class="elementor-image-box-description">University of Texas
-                        at Austin</p>
+                                                                 at Austin</p>
                     </div>
                   </a>
 
@@ -560,7 +596,7 @@
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
 
-                  <a href="http://graduatestudents.ucmerced.edu/wlai24/" Target="_blank">
+                  <a href="http://graduatestudents.ucmerced.edu/wlai24/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/WeiShengLai.jpg" alt="">
@@ -569,7 +605,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Wei-Sheng Lai</h3>
                       <p class="elementor-image-box-description">University of
-                        California, Merced</p>
+                                                                 California, Merced</p>
                     </div>
                   </a>
 
@@ -581,7 +617,7 @@
 
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
-                  <a href="https://eborboihuc.github.io/" Target="_blank">
+                  <a href="https://eborboihuc.github.io/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/HouNingHu.jpg" alt="">
@@ -589,7 +625,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Hou-Ning Hu</h3>
                       <p class="elementor-image-box-description">National Tsing Hua
-                        University</p>
+                                                                 University</p>
                     </div>
                   </a>
 
@@ -598,7 +634,7 @@
 
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
-                  <a href="https://sunset1995.github.io/" Target="_blank">
+                  <a href="https://sunset1995.github.io/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/ChengSun.jpg" alt="">
@@ -606,7 +642,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Cheng Sun</h3>
                       <p class="elementor-image-box-description">National
-                        Tsing Hua University</p>
+                                                                 Tsing Hua University</p>
                     </div>
                   </a>
 
@@ -615,7 +651,7 @@
 
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
-                  <a href="https://people.cs.nctu.edu.tw/~liweichan/" Target="_blank">
+                  <a href="https://people.cs.nctu.edu.tw/~liweichan/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/LiWeiChan.jpg" alt="">
@@ -635,7 +671,7 @@
 
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
-                  <a href="https://cvgl.stanford.edu/silvio/" Target="_blank">
+                  <a href="https://cvgl.stanford.edu/silvio/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/SilvioSavarese.jpg" alt="">
@@ -643,7 +679,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Silvio Savarese</h3>
                       <p class="elementor-image-box-description">Stanford
-                        University</p>
+                                                                 University</p>
                     </div>
                   </a>
 
@@ -652,7 +688,7 @@
 
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
-                  <a href="https://www.cs.utexas.edu/users/grauman/" Target="_blank">
+                  <a href="https://www.cs.utexas.edu/users/grauman/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/KristenGrauman.jpg" alt="">
@@ -660,7 +696,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Kristen Grauman</h3>
                       <p class="elementor-image-box-description">University of Texas
-                        at Austin</p>
+                                                                 at Austin</p>
                     </div>
                   </a>
                 </div>
@@ -668,7 +704,7 @@
 
               <td class="elementor-widget-image-box">
                 <div class="elementor-image-box-wrapper">
-                  <a href="http://faculty.ucmerced.edu/mhyang/" Target="_blank">
+                  <a href="http://faculty.ucmerced.edu/mhyang/" target="_blank">
                     <div class="elementor-image-box-img">
                       <img style="margin: auto; height: 150px; max-width: 150px;"
                            src="asset/MingHsuanYang.jpg" alt="">
@@ -676,7 +712,7 @@
                     <div class="elementor-image-box-content">
                       <h3 class="elementor-image-box-title">Ming-Hsuan Yang</h3>
                       <p class="elementor-image-box-description">University of
-                        California, Merced</p>
+                                                                 California, Merced</p>
                     </div>
                   </a>
                 </div>
@@ -719,14 +755,14 @@
         </div>
 
         <div class="widget-column footer-widget-1">
-          <small><a href="https://wordpress.org/" Target="_blank" class="imprint">Template from WordPress</a>
+          <small><a href="https://wordpress.org/" target="_blank" class="imprint">Template from WordPress</a>
           </small>
         </div>
 
         <div class="widget-column footer-widget-1">
           <small>The CC-licensed Video credits to <a href="https://www.youtube.com/watch?v=e3r-gVIf-qc/"
-                                                     Target="_blank">The New York
-            Times</a>
+                                                     target="_blank">The New York
+                                                                     Times</a>
           </small>
         </div>
 
